@@ -1,0 +1,16 @@
+<h1>List of Directors</h1>
+<table>
+  <% @list_of_directors.each do |director| %>
+  <tr>
+    <td>
+      <%= director.name %>
+    </td>
+    <td>
+      <img src="<%= director.image_url %>" width="80">
+    </td>
+    <td>
+      <a href="http://localhost:3000/directors/<%= director.id %>">Show</a>
+    </td>
+  </tr>
+  <% end %>
+</table>
